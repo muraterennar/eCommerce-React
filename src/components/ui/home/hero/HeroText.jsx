@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "../../../../tools/buttons/Button";
+import {NavLink} from "react-router-dom";
 
 function HeroText({className, textTitle}) {
     return (
@@ -12,7 +13,7 @@ function HeroText({className, textTitle}) {
                     but things on a small scale.
                 </p>
             </div>
-            <Button className={"mt-20 px-8 duration-100 hover:bg-opacity-80 py-3 bg-green-500 antialiased"}> Shop Now </Button>
+            <NavLink to={"/products"}><Button className={"mt-20 px-8 duration-100 hover:bg-opacity-80 py-3 bg-green-500 antialiased"}> Shop Now </Button></NavLink>
         </div>
     );
 }

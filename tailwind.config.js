@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
+      },
       colors: {
         "baseColor":"#FCDC91",
         "darkColor":"#282828",
@@ -14,7 +17,7 @@ module.exports = {
     },
   },
   plugins: [
-      require('@tailwindcss/aspect-ratio')
+      require('@tailwindcss/aspect-ratio','@tailwindcss/forms')
   ],
 }
 

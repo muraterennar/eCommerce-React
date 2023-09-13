@@ -6,15 +6,14 @@ import Products from "./products/Products";
 
 function Home({className}) {
     const [sort, setSort] = useState("");
-    const [category, setCategory] = useState("");
 
     return (
         <main>
             {/* ------- Hero Section -------*/}
             <Hero />
             <Category />
-            <Shorting />
-            <Products />
+            <Shorting setSortHandle={setSort} />
+            <Products sort={sort} />
         </main>
     );
 }
