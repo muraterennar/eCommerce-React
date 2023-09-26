@@ -3,14 +3,11 @@ import Icons from "../../../tools/icons/Icons";
 import {HeartIcon, ShoppingBagIcon, UserIcon} from "../../../constants/ui-constants";
 import {useDispatch, useSelector} from "react-redux";
 import {getCartTotal} from "../../../redux/slices/cartSlice";
+import {NavLink} from "react-router-dom";
 
 function NavbarIcons() {
     const dispatch = useDispatch();
-    const {cart, totalAmount,itemCount} = useSelector(state => state.cart);
-
-    console.log(cart, "cart");
-    console.log(totalAmount, "totalAmount");
-    console.log(itemCount, "itemCount");
+    const {itemCount} = useSelector(state => state.cart);
 
     useEffect(() => {
         dispatch(getCartTotal())
@@ -18,7 +15,7 @@ function NavbarIcons() {
 
     return (
         <div className={"flex justify-center items-center gap-6"}>
-            <Icons>{UserIcon}</Icons>
+            <NavLink to={"/auth/login"}><Icons>{UserIcon}</Icons></NavLink>
             <Icons>{HeartIcon}</Icons>
             <Icons className={"relative"} cartItemLength={itemCount}>{ShoppingBagIcon}</Icons>
         </div>

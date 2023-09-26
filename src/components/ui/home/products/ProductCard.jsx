@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from "../../../../tools/buttons/Button";
 import Loading from "../../../../tools/loading/Loading";
 import {STATUS} from "../../../../utils/status";
 import {NavLink} from "react-router-dom";
